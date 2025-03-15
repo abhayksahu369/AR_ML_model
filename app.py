@@ -18,7 +18,7 @@ with open("scaler.pkl", "rb") as file:
 def predict():
     try:
         # Extract input data from JSON request
-        print("dsaasdfasdf")
+     
         data = request.get_json()
         if not data or "input" not in data:
             return jsonify({"error": "Invalid input. Please send JSON with 'input' key."}), 400
