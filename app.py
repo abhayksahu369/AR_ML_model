@@ -37,7 +37,7 @@ def predict():
         prediction = model.predict(data_scaled)
 
         # Return prediction result
-        result = "FAULTY ⚠" if prediction[0] == 1 else "NORMAL ✅"
+        result = "FAULTY" if prediction[0] == 1 else "NORMAL"
         print(result)
         return jsonify({"prediction": result})
     
