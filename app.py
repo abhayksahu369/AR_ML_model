@@ -1,10 +1,11 @@
 import pickle
 import numpy as np
+from flask_cors import CORS
 from flask import Flask, request, jsonify
 from sklearn.preprocessing import StandardScaler
 
 app = Flask(__name__)
-
+CORS(app)
 # Load the ML model
 with open("model.pkl", "rb") as file:
     model = pickle.load(file)
