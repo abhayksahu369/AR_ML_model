@@ -18,6 +18,7 @@ with open("scaler.pkl", "rb") as file:
 def predict():
     try:
         # Extract input data from JSON request
+        print("dsaasdfasdf")
         data = request.json["input"]
         print(data)
         print("--------------------------------     ")
