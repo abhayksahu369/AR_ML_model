@@ -18,6 +18,8 @@ def predict():
     try:
         # Extract input data from JSON request
         data = request.json["input"]
+        print(data)
+        print("--------------------------------     ")
 
         # Convert to numpy array and reshape for prediction
         data_array = np.array(data).reshape(1, -1)
@@ -30,6 +32,7 @@ def predict():
 
         # Return prediction result
         result = "FAULTY ⚠" if prediction[0] == 1 else "NORMAL ✅"
+        print(result)
         return jsonify({"prediction": result})
     
     except Exception as e:
