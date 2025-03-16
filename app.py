@@ -31,10 +31,10 @@ def predict():
         data_array = np.array(data).reshape(1, -1)
 
         # Scale input using the saved scaler
-        data_scaled = scaler.transform(data_array)
+        # data_scaled = scaler.transform(data_array)
 
         # Make prediction
-        prediction = model.predict(data_scaled)
+        prediction = model.predict(data_array)
 
         # Return prediction result
         result = "FAULTY" if prediction[0] == 1 else "NORMAL"
